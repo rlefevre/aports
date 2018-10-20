@@ -2,10 +2,10 @@
 # Maintainer: Francesco Colista <fcolista@alpinelinux.org>
 pkgname=perl-dancer
 _pkgreal=Dancer
-pkgver=1.3202
-pkgrel=1
+pkgver=1.3400
+pkgrel=0
 pkgdesc="Perl module for Dancer"
-url="http://search.cpan.org/dist/Dancer/"
+url="https://search.cpan.org/dist/Dancer/"
 arch="noarch"
 license="GPL PerlArtistic"
 cpanmakedepends=""
@@ -15,7 +15,7 @@ cpandepends="perl-module-runtime perl-try-tiny perl-hash-merge-simple
 depends="$cpandepends"
 makedepends="perl-dev $cpanmakedepends"
 subpackages="$pkgname-doc"
-source="http://search.cpan.org/CPAN/authors/id/B/BI/BIGPRESH/$_pkgreal-$pkgver.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/B/BI/BIGPRESH/$_pkgreal-$pkgver.tar.gz"
 
 builddir="$srcdir/$_pkgreal-$pkgver"
 
@@ -42,4 +42,4 @@ package() {
 	find "$pkgdir" \( -name perllocal.pod -o -name .packlist \) -delete
 }
 
-sha512sums="d2865b694a36375ce3266bca5a1223b1e62365176b750e91fe428e7f8315a061c30b930285ee76c894881e40f4cefa539e3f806b81ae6b6897631ba34dd53676  Dancer-1.3202.tar.gz"
+sha512sums="51999f44471d510347d3d588faeb10840dc7ee87ee7fccc0776f834135fa04633a111c709a12685102666e4ccd51e4d803510ad63b1529e7449c4b70fc99c35b  Dancer-1.3400.tar.gz"
