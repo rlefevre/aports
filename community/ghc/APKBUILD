@@ -2,7 +2,7 @@
 pkgname=ghc
 pkgver=8.6.5
 _llvmver=9
-pkgrel=3
+pkgrel=4
 # Normal non rc candidate
 _urlprefix="$pkgver"
 _pkgprefix="$pkgname-$pkgver"
@@ -121,12 +121,12 @@ build() {
 	sed -i -e 's/unknown-linux-gnueabi/alpine-linux/g' llvm-targets
 	sed -i -e 's/unknown-linux-gnu/alpine-linux/g' llvm-targets
 
-	make
+	make V=0 -j$JOBS
 }
 
 check() {
 	cd "$builddir/testsuite"
-	make fast THREADS=$JOBS
+	make fast THREADS=$JOBS VERBOSE=1
 }
 
 doc() {
